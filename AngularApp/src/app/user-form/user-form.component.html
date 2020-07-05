@@ -5,7 +5,7 @@
    <div class="card-body">
       <form (ngSubmit)="onSubmit()" #userForm="ngForm">
          <div class="form-group">
-            <label for="firstName">Name</label>
+            <label for="text">Name</label>
             <input type="text" class="form-contrl" id="name" name="name" placeholder="Enter your name" [(ngModel)]="users.name">
          </div>
          <!-- <div class="form-group">
@@ -19,18 +19,21 @@
          <div class="form-group">
             <label for="gender">Gender</label>
             <div class="form-check">
-               <label class="form-check-label">
-                 <input type="radio" class="form-check-input" id="male" name="male" [(ngModel)]="users.gender">Male
+               <input class="form-check-input" type="radio" name="male" id="exampleRadios1" value="male" [(ngModel)]="users.gender">
+               <label class="form-check-label" for="exampleRadios1">
+                 Male
                </label>
              </div>
              <div class="form-check">
-               <label class="form-check-label">
-                 <input type="radio" class="form-check-input" id="female" name="female" [(ngModel)]="users.gender">Female
+               <input class="form-check-input" type="radio" name="female" id="exampleRadios2" value="female" [(ngModel)]="users.gender">
+               <label class="form-check-label" for="exampleRadios2">
+                 Female
                </label>
              </div>
              <div class="form-check">
-               <label class="form-check-label">
-                 <input type="radio" class="form-check-input" name="other" id="other" [(ngModel)]="users.gender">Other
+               <input class="form-check-input" type="radio" name="other" id="exampleRadios3" value="other" [(ngModel)]="users.gender">
+               <label class="form-check-label" for="exampleRadios3">
+                 Other
                </label>
              </div>
          </div>
