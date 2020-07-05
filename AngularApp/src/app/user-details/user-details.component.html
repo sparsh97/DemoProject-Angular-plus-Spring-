@@ -1,0 +1,22 @@
+<div class="container">
+   <table class="table table-bordered text-center">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Address</th>
+          <th scope="col">Age</th>
+          <th scope="col">Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let u of users">
+          <td>{{u.name}}</td>
+          <td >{{u.email}}</td>
+          <td>{{u.address}}</td>
+          <td>{{u.age}}</td>
+          <td>{{u.gender}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

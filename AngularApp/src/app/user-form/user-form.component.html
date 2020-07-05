@@ -1,0 +1,48 @@
+<div class="container">
+   <h6 class="display-4">Enter your details</h6>
+</div>
+<div class="card my-5">
+   <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+         <div class="form-group">
+            <label for="firstName">Name</label>
+            <input type="text" class="form-contrl" id="name" name="name" placeholder="Enter your name" [(ngModel)]="users.name">
+         </div>
+         <!-- <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name" [(ngModel)]="users.lastName">
+         </div> -->
+         <div class="form-group">
+            <label for="age">DOB</label>
+            <input type="date" class="form-control" id="age" name="age" placeholder="Enter the age" [(ngModel)]="users.age">
+         </div>
+         <div class="form-group">
+            <label for="gender">Gender</label>
+            <div class="form-check">
+               <label class="form-check-label">
+                 <input type="radio" class="form-check-input" id="male" name="male" [(ngModel)]="users.gender">Male
+               </label>
+             </div>
+             <div class="form-check">
+               <label class="form-check-label">
+                 <input type="radio" class="form-check-input" id="female" name="female" [(ngModel)]="users.gender">Female
+               </label>
+             </div>
+             <div class="form-check">
+               <label class="form-check-label">
+                 <input type="radio" class="form-check-input" name="other" id="other" [(ngModel)]="users.gender">Other
+               </label>
+             </div>
+         </div>
+         <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your current email" [(ngModel)]="users.email">
+         </div>
+         <div class="form-group">
+            <label for="address">Address</label>
+            <input type="address" class="form-control" id="address" name="address" placeholder="Enter your current address" [(ngModel)]="users.address">
+         </div>
+         <button type="submit"  class="btn btn-info">Submit</button>
+      </form>
+   </div>
+</div>

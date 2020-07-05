@@ -1,0 +1,21 @@
+<div class="container">
+   <h6 class="display-4">User List</h6>
+</div>
+<div class="container">
+   <table class="table table-bordered text-center">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let u of users">
+          <td>{{u.id}}</td>
+          <td ><a [routerLink]="['/user-details/',u.id]">{{u.name}}</a></td>
+          <td>{{u.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
